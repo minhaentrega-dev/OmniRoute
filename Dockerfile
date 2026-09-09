@@ -212,7 +212,7 @@ LABEL org.opencontainers.image.title="omniroute" \
   org.opencontainers.image.licenses="MIT"
 
 ENV NODE_ENV=production
-ENV PORT=20128
+ENV PORT=8080
 ENV HOSTNAME=0.0.0.0
 # Runtime heap ceiling. 1024MB is enough for normal traffic but can be tight
 # for large fusion-combo panels (many models fanned out in parallel, each
@@ -253,7 +253,7 @@ COPY --from=builder /app/scripts/dev/healthcheck.mjs ./healthcheck.mjs
 # COPYs so it covers files originally owned by root in the builder stage.
 RUN chown -R node:node /app
 
-EXPOSE 20128
+EXPOSE 8080
 
 # Drop to non-root before ENTRYPOINT/CMD so every derived stage (runner-cli,
 # runner-web) also runs as a non-root user unless they explicitly switch back.

@@ -1,31 +1,5 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# project-specific directories
-/output/
-.slim/deepwork/
-.omnivscodeagent/
-omnirouteCloud/
-omnirouteSite/
-_cache/
-_ideia/
-_mono_repo/
-_references/
-_tasks/
-.agents/**
-.claude/**
-.gemini/**
-.code-forge/**
-.config/**
-.data/**
-.logs/**
-.tests/**
-.coverage/**
-/coverage/
-.dist/**
-.next/**
-.build/**
-.out/**
-
 # Stryker mutation testing — ephemeral sandbox + generated reports (never commit)
 .stryker-tmp/
 reports/mutation/

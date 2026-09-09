@@ -29,8 +29,8 @@ services:
       - .env
     environment:
       NODE_ENV: production
-      PORT: "20128"
-      DASHBOARD_PORT: "20128"
+      PORT: "8080"
+      DASHBOARD_PORT: "8080"
       HOSTNAME: 0.0.0.0
       DATA_DIR: /app/data
       REDIS_URL: redis://redis:6379
@@ -40,7 +40,7 @@ services:
       INITIAL_PASSWORD: ${INITIAL_PASSWORD:?Set INITIAL_PASSWORD in .env}
       OMNIROUTE_WS_BRIDGE_SECRET: ${OMNIROUTE_WS_BRIDGE_SECRET:?Set OMNIROUTE_WS_BRIDGE_SECRET in .env}
     ports:
-      - "${OMNIROUTE_BIND_HOST:-127.0.0.1}:${OMNIROUTE_PORT:-20128}:20128"
+      - "${OMNIROUTE_BIND_HOST:-127.0.0.1}:${OMNIROUTE_PORT:-8080}:8080"
     volumes:
       - omniroute-data:/app/data
     tmpfs:
