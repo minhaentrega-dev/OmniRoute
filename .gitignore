@@ -106,14 +106,6 @@ app.__qa_backup/
 .app-build-backup-*/
 backup/
 
-# Build intermediates (.build/) and shippable standalone (dist/).
-# These are fully reproducible from source; never committed.
-# Layer 1: Next.js now writes to .build/next (was .next); assembled bundle → dist/
-# (Previously /app/ was the standalone output; renamed to /dist/ in Layer 1.)
-/.build/
-/dist/
-/.next/
-
 # Electron
 electron/dist-electron/
 electron/node_modules/
